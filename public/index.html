@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app='myapp'>
+    <head>
+        <title>
+            FixIt 'cuz we are out of great ideas'
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body style="background-image: url('assets/img/blueprint.jpg')">
+        <div id='header'>
+            <img id='fix' src="assets/img/fix.jpg" alt="Mountain View">
+        </div>
+        <br/>
+        <div id='search'>
+            <input id='searchb' type="text" name="searchBar"  />
+            <button id='searchbtn' type="button"> Search</button>
+        </div>
+        <br/>
+        <div id='store'>
+             <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody ng-controller="productList as p">
+                <tr ng-repeat="pro in p.products">
+                  <td>{{pro.name}}</td>
+                  <td>{{pro.price}}</td>
+                  <td><button id='cart' type="button">Add to Cart! {{pro.button}}</button></td>
+                </tr>
+             </tbody>
+         </table>
+         <br/>
+        </div>
+        
+        <div id='footer'>
+            <div id='in1' class="large-3-columns">
+            <p>ABOUT IFIXIT</p>
+            <br>
+            <a href="" id="fotterWord">About Us</a>
+            <br>
+            <a href="" id="fotterWord">Investor Relations</a>
+            <br>
+            <a href="" id="fotterWord">Careers</a>
+            <br>
+            <a href="" id="fotterWord">Store</a>
+            <br>
+        </div>
+        </div>
+        
+    </body>
+</html>
